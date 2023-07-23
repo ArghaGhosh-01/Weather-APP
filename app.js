@@ -48,6 +48,7 @@ app.post("/",function (req,res) {
             res.write("<h1>Temperature = "+ temp+ " Degree Celcius</h1>");
             res.write("<img src=" + imgurl + ">");
             res.send();//res.send can be only once in a file
+            // res.sendFile(__dirname+"/output.html");
         });
     })
 })

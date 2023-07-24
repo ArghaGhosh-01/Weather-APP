@@ -1,6 +1,10 @@
-.container
+body
 {
-    background-color: rgb(0, 0, 0);
+    /* background-image: url('images/background.jpeg'); */
+    background-image: url('background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: rgb(0, 0, 0); */
     padding: 25rem 0rem;
 }
 form

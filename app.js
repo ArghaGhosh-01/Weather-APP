@@ -6,7 +6,7 @@ require('dotenv').config();
 const app=express();
 
 const bodyparser=require("body-parser");
-
+app.set('view engine','ejs');
 
 app.use(bodyparser.urlencoded({extended: true}));
 //static folder
@@ -53,9 +53,10 @@ app.post("/",function (req,res) {
             // res.write("<img src=" + imgurl + ">");
             // res.send();//res.send can be only once in a file
             // res.sendFile(__dirname+"/output.html");
-            res.render("output", cityn : city,
+            res.render("output", {cityn : city,
             tempn : temp,
             descriptionn:description,
+        imgurln : imgurl}
             );
         });
     })

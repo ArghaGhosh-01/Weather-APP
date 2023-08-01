@@ -47,12 +47,16 @@ app.post("/",function (req,res) {
             const imgurl="https://openweathermap.org/img/wn/" +icon+ "@2x.png";
     
             //We use res.write to print different lines of code
-            res.write("<h1> Weather of " + city + ":</h1>");
-            res.write("<h1>The weather status is "+description+"</h1>");
-            res.write("<h1>Temperature = "+ temp+ " Degree Celcius</h1>");
-            res.write("<img src=" + imgurl + ">");
-            res.send();//res.send can be only once in a file
+            // res.write("<h1> Weather of " + city + ":</h1>");
+            // res.write("<h1>The weather status is "+description+"</h1>");
+            // res.write("<h1>Temperature = "+ temp+ " Degree Celcius</h1>");
+            // res.write("<img src=" + imgurl + ">");
+            // res.send();//res.send can be only once in a file
             // res.sendFile(__dirname+"/output.html");
+            res.render("output", cityn : city,
+            tempn : temp,
+            descriptionn:description,
+            );
         });
     })
 })

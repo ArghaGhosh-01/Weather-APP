@@ -10,7 +10,7 @@
     left: 50%;
     transform: translate(-50%, -50%);">
 
-        <div class="card mb-3 " style="max-width: 540px;">
+        <div class="card mb-3 " style="max-width: 600px; scale: 2.0;">
             <div class="row g-0 ">
                 <div class="col-md-4">
                     <img src="<%= imgurln %>" class="img-fluid rounded-start" alt="...">
@@ -18,10 +18,10 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title"><%= cityn %></h5>
-                        <p class="card-text">Description :<%= descriptionn %></p>
-                        <p class="card-text"><small class="text-body-secondary">Temperature :<%= tempn %></small></p>
-                        <p class="card-text"><small class="text-body-secondary">Temperature :<%= tempn %></small></p>
-                        <p class="card-text"><small class="text-body-secondary">Temperature :<%= tempn %></small></p>
+                        <p class="card-text">Description : <%= descriptionn %></p>
+                        <p class="card-text"><small class="text-body-secondary">Temperature: <%= tempn %> °C</small></p>
+                        <p class="card-text"><small class="text-body-secondary">Feels Like: <%= feelsliken %> °C</small></p>
+                        <p class="card-text"><small class="text-body-secondary">Humidity: <%= humidityn %></small></p>
                     </div>
                 </div>
             </div>

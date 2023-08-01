@@ -35,13 +35,15 @@ app.post("/",function (req,res) {
             console.log(weatherdata);
     
             const temp= weatherdata.main.temp;
-            console.log("TEMPERATURE = "+temp);
+            // console.log("TEMPERATURE = "+temp);
             
             const feelslike= weatherdata.main.feels_like;
-            console.log("FEELS LIKE = "+feelslike);
+            // console.log("FEELS LIKE = "+feelslike);
+            const humidity= weatherdata.main.humidity;
+
             
             const description =weatherdata.weather[0].description;
-            console.log("DESCRIPTION = "+description);
+            // console.log("DESCRIPTION = "+description);
     
             const icon=weatherdata.weather[0].icon;
             const imgurl="https://openweathermap.org/img/wn/" +icon+ "@2x.png";
@@ -56,7 +58,9 @@ app.post("/",function (req,res) {
             res.render("output", {cityn : city,
             tempn : temp,
             descriptionn:description,
-        imgurln : imgurl}
+        imgurln : imgurl,
+    feelsliken : feelslike,
+humidityn : humidity}
             );
         });
     })
